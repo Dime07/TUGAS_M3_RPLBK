@@ -18,19 +18,40 @@ function App() {
     document.getElementById('input-right').value = ''
   }
 
+  const title = {
+    fontSize: '24pt',
+    color: 'white',
+    fontWeight: 'bold',
+    paddingLeft: '1em'
+  }
+
+  const subTitle = {
+    fontSize: '16pt',
+    color: 'white',
+    paddingLeft: '1.5em'
+  }
+
+  const leftInput = {
+    display: 'block',
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  }
+
   return (
     <div>
-      <p>
-        Fake Chat Flter App
+      <p style={title}>
+        Fake Chat Filter App
       </p>
-      <p>
+      <p style={subTitle}>
         This word not allowed (shit)
       </p>
       <Main chat={chat}/>
       <div>
-        <div>
-          <input id="input-left" onChange={(e) => setLeftChat({message: e.target.value, type: 'left'})}/>
-          <button onClick={sendToLeft}>Kirim </button>
+        <div style={leftInput}>
+          <div style={leftInput}>
+            <input  id="input-left" onChange={(e) => setLeftChat({message: e.target.value, type: 'left'})}/>
+            <button onClick={sendToLeft}>Kirim </button>
+          </div>
         </div>
 
         <div>
