@@ -56,7 +56,7 @@ function App() {
         This word not allowed (shit)
       </p>
       <Main chat={chat}/>
-      <div style={container}>
+      <div style={container }>
         <div style={leftInput}>
           <div style={leftInput}>
             <input  id="input-left" onChange={(e) => setLeftChat({message: e.target.value, type: 'left'})}/>
