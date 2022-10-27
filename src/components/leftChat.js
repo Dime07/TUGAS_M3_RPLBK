@@ -4,7 +4,7 @@ export default function LeftChat(props){
     const bubble = {
         padding: '10px',
         borderRadius: '3px 5px 3px 5px',
-        backgroundColor: 'white',
+        backgroundColor: 'purple',
         width: 'fit-content',
         height: 'fit-content',
     }
