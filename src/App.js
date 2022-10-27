@@ -32,10 +32,20 @@ function App() {
   }
 
   const leftInput = {
-    display: 'block',
+    display: 'flex',
     marginLeft: 'auto',
     marginRight: 'auto'
   }
+  const rightInput = {
+    display: 'flex',
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  }
+
+  const container = {
+    display: 'flex'
+  }
+  
 
   return (
     <div>
@@ -46,7 +56,7 @@ function App() {
         This word not allowed (shit)
       </p>
       <Main chat={chat}/>
-      <div>
+      <div style={container}>
         <div style={leftInput}>
           <div style={leftInput}>
             <input  id="input-left" onChange={(e) => setLeftChat({message: e.target.value, type: 'left'})}/>
@@ -54,9 +64,11 @@ function App() {
           </div>
         </div>
 
-        <div>
-          <input id="input-right" onChange={(e) => setRightChat({message: e.target.value, type: 'right'})}/>
-          <button  onClick={sendToRight}>Kirim </button>
+        <div style={rightInput}>
+          <div style={rightInput}>
+            <input id="input-right" onChange={(e) => setRightChat({message: e.target.value, type: 'right'})}/>
+            <button  onClick={sendToRight}>Kirim </button>
+          </div>
         </div>
 
       </div>
